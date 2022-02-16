@@ -3,7 +3,7 @@ import { Container } from './styles';
 import { IoClose } from 'react-icons/io5';
 import { useEffect } from 'react';
 
-function MenuMobile({ menuIsVisible, setMenuIsVisible }) {
+ function MenuMobile({ menuIsVisible, setMenuIsVisible }) {
   useEffect(() => {
     document.body.style.overflowY = menuIsVisible ? 'hidden' : 'auto';
   }, [menuIsVisible]);
@@ -12,10 +12,10 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible }) {
     <Container isVisible={menuIsVisible}>
       <IoClose size={45} onClick={() => setMenuIsVisible(false)}/>
       <nav>
-          <a href="#">Home</a>
-          <a href="#">Agencia Virtual</a>
-          <a href="#">Noticias</a>
-          <a href="#">Sobre Nós</a>
+        <a href="#">Home</a>
+        <a href="#">Produtos</a>
+        <a href="#">Sobre nós</a>
+        <a href="#">Contato</a>
       </nav>
     </Container>
   )

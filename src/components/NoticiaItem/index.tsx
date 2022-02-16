@@ -7,10 +7,10 @@ interface NoticiaItemProps {
   title: string;
   description: string;
   slug:String;
-  date:String;
+  
 }
 
-function NoticiaItem({ title,description, img, slug,date}: NoticiaItemProps) {
+function NoticiaItem({ title,description, img, slug}: NoticiaItemProps) {
   return (
     <Container>
      <Link href={`/noticias/${slug}`}>
@@ -18,7 +18,7 @@ function NoticiaItem({ title,description, img, slug,date}: NoticiaItemProps) {
           <div className="overlay">
             <section>
               <img src={img} alt="" />
-              <span>{date}</span>
+             
               <h2>{title}</h2>
               <p>{description}</p>
             </section>

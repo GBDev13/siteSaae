@@ -6,30 +6,30 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 interface ServicosProps{
-  servico:String;
-  icon:String;
+  servico:string;
+  icone:string;
 }
 
 
-function Servicos({servico,icon}:ServicosProps) {
+function Servicos({servico,icone}:ServicosProps) {
   return (
     <Container>
       <SectionTitle title="Serviços"/>
       <section>
         <ServicoItem 
-        icon={<ImFilesEmpty/>}
+        icone={<ImFilesEmpty/>}
         servico="Segunda Via da conta"
         />
           <ServicoItem 
-        icon={<ImFilesEmpty/>}
+        icone={<ImFilesEmpty/>}
         servico="Ligação nova e esgoto"
         />
           <ServicoItem 
-        icon={<ImFilesEmpty/>}
+        icone={<ImFilesEmpty/>}
         servico="Reeligação de agua e esgoto"
         />
         <ServicoItem 
-        icon={<ImFilesEmpty/>}
+        icone={<ImFilesEmpty/>}
         servico="Reclamação de fatura"
         />
      

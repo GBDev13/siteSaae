@@ -34,7 +34,7 @@ export default function Noticias({noticias}: NoticiasProps){
 
         <main className="container">
             {noticias.map(noticia =>
-              <NoticiaItem
+             <NoticiaItem
               key={noticia.slug}
               img={noticia.thumbnail}
              
