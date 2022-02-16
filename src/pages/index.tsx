@@ -24,7 +24,7 @@ interface HomeProps{
 
 
 
-export default function Home({noticias}: HomeProps){
+ function Home({noticias}: HomeProps){
   const [menuIsVisible, setMenuIsVisible] = useState(false);
 
   return (
@@ -76,3 +76,5 @@ export const getStaticProps: GetStaticProps = async () =>{
     revalidate: 86400
   };
 };
+
+export default Home;

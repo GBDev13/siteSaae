@@ -9,7 +9,7 @@ import { useEffect } from 'react';
   }, [menuIsVisible]);
 
   return (
-    <Container isVisible={menuIsVisible}>
+    <Container >
       <IoClose size={45} onClick={() => setMenuIsVisible(false)}/>
       <nav>
         <a href="#">Home</a>

@@ -20,7 +20,7 @@ interface Inoticia{
     noticias: Inoticia[];
   }
 
-export default function Noticias({noticias}: NoticiasProps){
+function Noticias({noticias}: NoticiasProps){
     const [menuIsVisible, setMenuIsVisible] = useState(false);
     
     return(
@@ -85,4 +85,5 @@ export const getStaticProps: GetStaticProps = async () =>{
       revalidate: 86400
     };
   };
+  export default Noticias;
   
