@@ -26,11 +26,10 @@ function Noticias({noticias}:NoticiasProps) {
       <section>
       {noticias.slice(0,3).map(noticia =>(
           <NoticiaItem
-           key={noticia.slug}
-           slug={noticia.slug}
-           img={noticia.thumbnail}
-           title={noticia.title}
-           
+          key={noticia.slug}
+          slug={noticia.slug}
+          img={noticia.thumbnail}
+          title={noticia.title} description={''}           
          />
     
          

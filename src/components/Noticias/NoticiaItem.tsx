@@ -13,7 +13,7 @@ export default function NoticiaItem({
   title,
   description,
   slug
-}: NoticiaProps) {
+}: NoticiaProps): JSX.Element {
   return (
     <ItemContainer  data-aos="fade-up">
       <div>

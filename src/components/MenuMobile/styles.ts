@@ -1,6 +1,9 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.section`
+interface MenuMonilibeProps{
+  isVisible: boolean;
+}
+export const Container = styled.section<MenuMonilibeProps>`
   position: absolute;
   backdrop-filter: blur(3px);
   width: 100%;
