@@ -38,7 +38,7 @@ interface HomeProps{
     
         <HomeHero/>
         <main className="container">
-          <Servicos servico={""} icon={""}/>
+          <Servicos/>
           <Noticias noticias={noticias}/>
         </main>
         
