@@ -35,13 +35,12 @@ function Noticias({noticias}: NoticiasProps){
         <main className="container">
             {noticias.map(noticia =>
              <NoticiaItem
-              key={noticia.slug}
-              img={noticia.thumbnail}
-             
-              title={noticia.title}
-              
-              slug={noticia.slug}
-          />
+                key={noticia.slug}
+                img={noticia.thumbnail}
+
+                title={noticia.title}
+
+                slug={noticia.slug} description={""}          />
             
             )}
           
