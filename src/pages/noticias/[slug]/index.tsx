@@ -1,5 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import Header from '../../../components/Header'
 import MenuMobile from '../../../components/MenuMobile'
 
@@ -8,6 +10,10 @@ import { getPrismicClient } from '../../../services/prismic';
 import {NoticiaContainer} from '../../../styles/NoticiaStyles'
 import Prismic from '@prismicio/client'
 import {RichText} from 'prismic-dom'
+import LoadingScreen from '../../../components/LoadingScreen';
+
+
+
 
 
 interface NoticiaProps{
@@ -16,6 +22,7 @@ interface NoticiaProps{
     title: string;
     description: string;
     content:string;
+    
   }
 }
 
@@ -24,7 +31,14 @@ interface NoticiaProps{
 
 
 export default function Noticia({noticia}:NoticiaProps){
+
+  const router = useRouter();
+  if (router.isFallback) {
+    return <LoadingScreen />;
+  }
     const [menuIsVisible, setMenuIsVisible] = useState(false);
+
+
     return(
     <>
         <MenuMobile
@@ -38,6 +52,7 @@ export default function Noticia({noticia}:NoticiaProps){
         
         
               <main className="container">
+                
                 <h1>{noticia.title}</h1>
                 <h2>{noticia.description}</h2>
                 <div dangerouslySetInnerHTML={{__html: noticia.content}}>
@@ -98,4 +113,5 @@ export const getStaticProps: GetStaticProps = async context => {
     revalidate: 86400
   };
 };
+
 
