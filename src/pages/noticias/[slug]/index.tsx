@@ -60,7 +60,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
  
   const paths = noticias.results.map(noticia => ({
     params: {
-      slug: noticia.uid
+      slug: noticia.uid,
       
     }
   }));
