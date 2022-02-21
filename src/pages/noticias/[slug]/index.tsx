@@ -86,7 +86,7 @@ export const getStaticProps: GetStaticProps = async context => {
     content: RichText.asHtml(response.data.content),
     
   }
-  console.log(response)
+  
    
  
 
