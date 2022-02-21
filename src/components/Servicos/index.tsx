@@ -8,25 +8,27 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 
+
+
 function Servicos(){
   return (
     <Container>
       <SectionTitle title="Serviços"/>
       <section>
         <ServicoItem 
-        icon=''
+        icone={<ImFilesEmpty/>}
         servico="Segunda Via da conta"
         />
         <ServicoItem 
-        icon=''
-        servico="Ligação nova e esgoto"
+       icone={<ImFilesEmpty/>}
+        servico="Ligação  de agua  e esgoto"
         />
-          <ServicoItem 
-        icon=''
+        <ServicoItem 
+        icone={<ImFilesEmpty/>}
         servico="Reeligação de agua e esgoto"
         />
         <ServicoItem 
-        icon=''
+        icone={<ImFilesEmpty/>}
         servico="Reclamação de fatura"
         />
      

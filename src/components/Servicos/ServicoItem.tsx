@@ -1,16 +1,17 @@
+import { ReactNode } from 'react';
 import { ItemContainer } from './styles';
 
 
 interface ServicoItemProps{
-  icon: string;
+  icone: ReactNode;
   servico: string;
 }
 
-function ServicoItem({icon, servico}: ServicoItemProps) {
+function ServicoItem({icone, servico}: ServicoItemProps) {
   return (
     <ItemContainer>
       <div>
-      <h1>{icon}</h1>
+       <h1>{icone}</h1>
       <p>{servico}</p>
       </div>
       

@@ -9,6 +9,7 @@ import Noticias from "../components/Noticias";
 import { getPrismicClient } from "../services/prismic";
 import { GetStaticProps } from "next";
 import Prismic from '@prismicio/client'
+import { ReactNode } from 'react';
 
 interface Inoticia{
   slug: string;
@@ -55,12 +56,14 @@ export const getStaticProps: GetStaticProps = async () =>{
   const noticiaResponse = await prismic.query(
     [Prismic.Predicates.at('document.type','noticia')],
     {orderings:'[document.first_publication_date desc]'}
+   
 
   );
 
- 
+  
 
   const noticias = noticiaResponse.results.map(noticia => ({
+   
     slug: noticia.uid,
     title: noticia.data.title,
     
@@ -68,7 +71,7 @@ export const getStaticProps: GetStaticProps = async () =>{
     
     thumbnail: noticia.data.thumbnail.url
   }));
-
+  
   return{
     props:{
       noticias
