@@ -22,6 +22,7 @@ interface NoticiaProps{
     title: string;
     description: string;
     content:string;
+    updatedAt: string;
     
   }
 }
@@ -52,12 +53,23 @@ export default function Noticia({noticia}:NoticiaProps){
         
         
               <main className="container">
-                
-                <h1>{noticia.title}</h1>
+              
+               <section>
+               <h1>{noticia.title}</h1>
+               
                 <h2>{noticia.description}</h2>
-                <div dangerouslySetInnerHTML={{__html: noticia.content}}>
-
+                <div className='time'>
+                <span>Por Sabrina Sousa</span>
+                <time>{noticia.updatedAt}</time>
                 </div>
+           
+              
+                <div className='content' dangerouslySetInnerHTML={{__html: noticia.content}}></div>
+
+               </section>
+           
+                
+              
               </main>
 
             
@@ -99,8 +111,14 @@ export const getStaticProps: GetStaticProps = async context => {
     title: response.data.title,
     description: response.data.description,
     content: RichText.asHtml(response.data.content),
-    
-  }
+    updatedAt: new Date(response.last_publication_date).toLocaleDateString('pt-BR',{
+      day:'2-digit',
+      month:'long',
+      year:'numeric'
+    })
+  };
+
+  console.log(noticia);
   
    
  
@@ -108,7 +126,7 @@ export const getStaticProps: GetStaticProps = async context => {
 
   return{
     props:{
-     noticia
+     noticia,
     },
     revalidate: 86400
   };
