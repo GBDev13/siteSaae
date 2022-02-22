@@ -17,10 +17,10 @@ interface MenuMonileProps{
     <Container isVisible={menuIsVisible}>
       <IoClose size={45} onClick={() => setMenuIsVisible(false)}/>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Produtos</a>
-        <a href="#">Sobre nós</a>
-        <a href="#">Contato</a>
+          <a href="/">Home</a>
+          <a href="#">Agencia Virtual</a>
+          <a href="/noticias">Noticias</a>
+          <a href="#">Sobre Nós</a>
       </nav>
     </Container>
   )
