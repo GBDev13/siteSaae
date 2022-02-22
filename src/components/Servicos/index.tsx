@@ -1,40 +1,26 @@
+import { ImFilesEmpty } from 'react-icons/im';
 import SectionTitle from '../SectionTitle';
 import ServicoItem from './ServicoItem';
 import { Container } from './styles';
-import { ImFilesEmpty} from 'react-icons/im';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
-
-
-
-
-
-function Servicos(){
+function Servicos() {
   return (
     <Container>
-      <SectionTitle title="Serviços"/>
+      <SectionTitle title="Serviços" />
       <section>
-        <ServicoItem 
-        icone={<ImFilesEmpty/>}
-        servico="Segunda Via da conta"
+        <ServicoItem icone={<ImFilesEmpty />} servico="Segunda Via da conta" />
+        <ServicoItem
+          icone={<ImFilesEmpty />}
+          servico="Ligação  de agua  e esgoto"
         />
-        <ServicoItem 
-       icone={<ImFilesEmpty/>}
-        servico="Ligação  de agua  e esgoto"
+        <ServicoItem
+          icone={<ImFilesEmpty />}
+          servico="Reeligação de agua e esgoto"
         />
-        <ServicoItem 
-        icone={<ImFilesEmpty/>}
-        servico="Reeligação de agua e esgoto"
-        />
-        <ServicoItem 
-        icone={<ImFilesEmpty/>}
-        servico="Reclamação de fatura"
-        />
-     
+        <ServicoItem icone={<ImFilesEmpty />} servico="Reclamação de fatura" />
       </section>
     </Container>
   );
-};
+}
 
 export default Servicos;

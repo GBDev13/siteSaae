@@ -1,19 +1,17 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { Container } from "./styles";
+import { FaInstagram, FaWhatsapp, FaFacebookSquare } from 'react-icons/fa';
+import { RiMenu3Fill } from 'react-icons/ri';
+import Image from 'next/image';
+import { Container } from './styles';
 
 import logoImg from '../../assets/logobranca.png';
-
-import {FaInstagram, FaWhatsapp,FaFacebookSquare } from 'react-icons/fa';
-import { RiMenu3Fill } from 'react-icons/ri';
 
 function Header({ setMenuIsVisible }) {
   return (
     <Container>
       <section>
-       
-        <img src={logoImg} alt="Logo"/>
-       
-        
+        <Image src={logoImg} alt="Logo" />
+
         <nav>
           <a href="/">Home</a>
           <a href="#">Agencia Virtual</a>
@@ -23,12 +21,15 @@ function Header({ setMenuIsVisible }) {
       </section>
 
       <section>
-        <FaInstagram size={30}/>
+        <FaInstagram size={30} />
         <FaWhatsapp size={30} />
         <FaFacebookSquare size={30} />
-        <RiMenu3Fill onClick={() => setMenuIsVisible(true)} className="mobile"/>
+        <RiMenu3Fill
+          onClick={() => setMenuIsVisible(true)}
+          className="mobile"
+        />
       </section>
     </Container>
-  )
+  );
 }
 export default Header;

@@ -1,45 +1,38 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Image from 'next/image';
+import { Navigation, Pagination } from 'swiper';
 import { Container } from './styles';
 import bannerImg from '../../assets/banner.jpg';
 import slider1 from '../../assets/slider1.jpg';
 import slider2 from '../../assets/slider2.jpg';
-import Slider from "react-slick";
 
-
-
-
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 function HomeHero() {
-
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
   return (
     <Container>
-     
-       
-
-      <Slider {...settings}>
-      <div>
-        <h3><img src={bannerImg} alt="Logo"/></h3>
-      </div>
-      <div>
-        <h3><img src={slider1} alt="Logo"/></h3>
-      </div>
-      <div>
-        <h3><img src={slider2} alt="Logo"/></h3>
-      </div>
-     
-    
-     
-    </Slider>
+      <Swiper
+        spaceBetween={0}
+        slidesPerView={1}
+        navigation
+        pagination
+        modules={[Navigation, Pagination]}
+        loop
+      >
+        <SwiperSlide>
+          <Image src={bannerImg} alt="Logo" layout="fill" objectFit="cover" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={slider1} alt="Logo" layout="fill" objectFit="cover" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image src={slider2} alt="Logo" layout="fill" objectFit="cover" />
+        </SwiperSlide>
+      </Swiper>
     </Container>
   );
-};
+}
 
 export default HomeHero;
-
-
