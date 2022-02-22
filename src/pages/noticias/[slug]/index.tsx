@@ -46,6 +46,7 @@ export default function Noticia({noticia}:NoticiaProps){
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}
       />
+      
         <NoticiaContainer>
 
         <Header setMenuIsVisible={setMenuIsVisible}/>
