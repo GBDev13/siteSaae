@@ -10,9 +10,9 @@ function Header({ setMenuIsVisible }) {
   return (
     <Container>
       <section>
-        <a href="/">
+       
         <img src={logoImg} alt="Logo"/>
-        </a>
+       
         
         <nav>
           <a href="/">Home</a>

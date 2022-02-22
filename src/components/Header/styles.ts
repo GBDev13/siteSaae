@@ -16,7 +16,7 @@ export const Container = styled.header`
     &:last-child {
       gap: 1rem;
     }
-
+   
     > img {
       width: 200px;
       padding: none;
