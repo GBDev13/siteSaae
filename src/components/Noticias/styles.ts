@@ -76,7 +76,8 @@ export const ItemContainer = styled.div`
     > div {
       height:0;
       padding-top:0;
-      flex-direction: column;
+      display: flex;
+      flex-direction: row;
      
 
       h1 {
@@ -95,7 +96,8 @@ export const ItemContainer = styled.div`
   }
 
   @media (max-width: 700px) {
-    &:nth-child(even) > div {
+    &:nth-child(even) 
+    > div {
       margin-top: 0;
     }
 
@@ -107,8 +109,10 @@ export const ItemContainer = styled.div`
       height: auto;
       padding: 0;
       max-width: 100%;
-      a{
+      display: flex;
       flex-direction: row;
+      a{
+      
     }
       
 

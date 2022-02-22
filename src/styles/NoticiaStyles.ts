@@ -10,7 +10,7 @@ export const NoticiaContainer = styled.div`
     > main{
         display: flex;
 
-        margin-top: 5rem;
+        margin-top: 4rem;
         flex-direction: column;
         h1{
             font-size:5rem;
@@ -48,7 +48,11 @@ export const NoticiaContainer = styled.div`
         }
 
     @media (max-width: 1000px) {
-      h1{
+      
+      >main{
+          margin-top: 1rem;
+      }
+        h1{
           font-size: 2rem;
           
       }
@@ -78,6 +82,9 @@ export const NoticiaContainer = styled.div`
 
     @media (max-width: 700px) {
      
+      >main{
+          margin-top: 1rem;
+      }
         h1{
           font-size: 1.5rem;
           
